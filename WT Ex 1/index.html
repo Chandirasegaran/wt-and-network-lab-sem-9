@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registeration Form</title>
+    <link rel="stylesheet" href="./assets/Styles/styles.css">
+</head>
+<body>
+    <div>
+        <header id="heading" >Student Registeration Form</header>
+        <form action="submit.php">
+        <br>
+        <table>
+           
+            <tr>
+                <td>
+                    <label for="name">Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="tboxname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fname">Father's Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="fname" id="tboxfname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mname">Mother's Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="mname" id="tboxmname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Date of Birth:</label>
+                </td>
+                <td>
+                    <input type="date" name="dob" id="tboxdob">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="telno">Phone Number:</label>
+                </td>
+                <td>
+                    <input type="tel" name="telno" id="tboxtelno">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="tboxemail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="course">Course:</label>
+                </td>
+                <td>
+                    <select name="course" id="course">
+                        <option value="bsc">Bachelor of Computer Science</option>
+                        <option value="msc">Master of Computer Science</option>
+                        <option value="mca">Master of Computer Applications</option>
+                        <option value="mtechcs">Master of Technology in Computer SCience</option>
+                        <option value="mtechnis">Master of Technology in Networks and Information Security</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="image">Upload Image:</label>
+                </td>
+                <td>
+                   <input type="file" name="image" id="image" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="resume">Upload Resume:</label>
+                </td>
+                <td>
+                   <input type="file" name="resume" id="resume" accept="application/pdf">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+    <footer>&COPY; Chandirasegaran</footer>
+    </div>
+</body>
+</html>
