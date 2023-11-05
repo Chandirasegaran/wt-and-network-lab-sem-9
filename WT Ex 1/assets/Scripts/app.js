@@ -20,16 +20,16 @@ const plable = document.getElementById('phonelabid');
 phoneInput.addEventListener('input', function (event) {
   const sanitizedValue = phoneInput.value.replace(/\D/g, '');
   phoneInput.value = sanitizedValue;
-  if (sanitizedValue.length === 10 || sanitizedValue.length === 0) {
-    phoneInput.style.borderColor = ''; 
-    phoneInput.setCustomValidity(''); 
-    plable.innerHTML= 'Phone Number';
-    plable.style.color='';
+  if (sanitizedValue.length === 10) {
+    phoneInput.style.borderColor = '';
+    phoneInput.setCustomValidity('');
+    plable.innerHTML = 'Phone Number';
+    plable.style.color = '';
   } else {
-    phoneInput.style.borderColor = 'red'; 
-    phoneInput.setCustomValidity(''); 
-    plable.innerHTML= 'Enter valid Phone Number';
-    plable.style.color='red';
+    phoneInput.style.borderColor = 'red';
+    phoneInput.setCustomValidity('');
+    plable.innerHTML = 'Enter valid Phone Number';
+    plable.style.color = 'red';
   }
 });
 
@@ -38,8 +38,44 @@ phoneInput.addEventListener('input', function (event) {
 const emailInput = document.getElementById('emailinput');
 const elabel = document.getElementById('emaillabel');
 
-emailInput.addEventListener('input', function(event)){
-  const emailvalue=emailInput.value;
+emailInput.addEventListener('input', function (event) {
+  const emailValue = emailInput.value;
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(edu|com|net|org|in)$/;
-  
-}
+  if (emailPattern.test(emailValue)) {
+    emailInput.style.borderColor = '';
+    emailInput.setCustomValidity('');
+    elabel.innerHTML = 'Email';
+    elabel.style.color = '';
+  } else {
+    emailInput.style.borderColor = 'red';
+    emailInput.setCustomValidity('');
+    elabel.innerHTML = 'Enter valid Email';
+    elabel.style.color = 'red';
+  }
+});
+
+
+// Preventing Submission from invalid email and Phone
+
+const form = document.querySelector('form');
+form.addEventListener('submit', function (event) {
+  const emailValue = emailInput.value;
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(edu|com|net|org|in)$/;
+  const sanitizedValue = phoneInput.value.replace(/\D/g, '');
+
+  if (!emailPattern.test(emailValue)) {
+    emailInput.style.borderColor = 'red';
+    emailInput.setCustomValidity('');
+    elabel.innerHTML = 'Enter valid Email';
+    elabel.style.color = 'red';
+    event.preventDefault(); // Prevent form submission
+  }
+  if (sanitizedValue.length !== 10) {
+    phoneInput.style.borderColor = 'red';
+    phoneInput.setCustomValidity('');
+    plable.innerHTML = 'Enter valid Phone Number';
+    plable.style.color = 'red';
+    event.preventDefault(); // Prevent form submission
+  }
+});
+

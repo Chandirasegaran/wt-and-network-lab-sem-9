@@ -96,20 +96,13 @@ border-radius: 1rem;
     font-size: 1.2em;
 }
 
-/* .name{
-    display: inline-block;
-    position: relative;
-    width: 100%;
 
-} */
 input[type=text],
 input[type=email],
 input[type=tel],
 input[type=date] {
     width: 100%;
     padding: 12px 20px;
-    /* border: 1PX; */
-    /* border-bottom: 2px solid black; */
     transition: border-color 0.3s;
     outline: none;
     font-size: 16px;
@@ -125,8 +118,6 @@ input[type=date]:focus {
 .courselist {
     width: 100%;
     padding: 12px 20px;
-    /* border: 1PX; */
-    /* border-bottom: 2px solid black; */
     transition: border-color 0.3s;
     outline: none;
     font-size: 16px;
@@ -145,7 +136,6 @@ input[type=date]:focus {
 .placeholderlableactive {
 
     position: relative;
-    /* pointer-events: none; */
     top: -57px;
     left: 10px;
     font-size: 12px;
@@ -205,7 +195,6 @@ input[type=date]:valid+.placeholderlable {
 }
 .resumeupload{
     margin-top: 8px;
-    /* margin-bottom: 10px; */
 }
 
 input[type=submit]{
