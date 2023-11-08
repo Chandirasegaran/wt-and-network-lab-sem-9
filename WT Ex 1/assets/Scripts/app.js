@@ -11,7 +11,6 @@ ractualBtn.addEventListener('change', function () {
   rfileChosen.textContent = this.files[0].name
 })
 
-
 // Phone Number Validation
 
 const phoneInput = document.getElementById('phone');
