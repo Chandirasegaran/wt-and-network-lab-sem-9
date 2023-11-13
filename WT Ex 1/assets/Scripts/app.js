@@ -45,7 +45,8 @@ emailInput.addEventListener('input', function (event) {
     emailInput.setCustomValidity('');
     elabel.innerHTML = 'Email';
     elabel.style.color = '';
-  } else {
+  }   
+  else {
     emailInput.style.borderColor = 'red';
     emailInput.setCustomValidity('');
     elabel.innerHTML = 'Enter valid Email';
