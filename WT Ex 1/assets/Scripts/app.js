@@ -1,3 +1,9 @@
+document.querySelectorAll('input[type="text"]').forEach(function (input) {
+  input.addEventListener('input', function () {
+    this.value = this.value.toUpperCase();
+  });
+});
+
 // Photo Upload Button
 const iactualBtn = document.getElementById('img-btn');
 const ifileChosen = document.getElementById('img-chosen');
@@ -39,7 +45,7 @@ const elabel = document.getElementById('emaillabel');
 
 emailInput.addEventListener('input', function (event) {
   const emailValue = emailInput.value;
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(edu|com|net|org|in)$/;
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(edu|com|net|org|in|co)$/;
   if (emailPattern.test(emailValue)) {
     emailInput.style.borderColor = '';
     emailInput.setCustomValidity('');

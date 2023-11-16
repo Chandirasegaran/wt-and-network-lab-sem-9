@@ -13,5 +13,4 @@ CREATE TABLE IF NOT EXISTS student_profiles (
     image_path VARCHAR(255) NOT NULL,
     resume_path VARCHAR(255) NOT NULL
 );
-
-SELECT *FROM student_profiles;
+SELECT *FROM STUDENT_PROFILES;

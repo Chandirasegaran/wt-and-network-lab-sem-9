@@ -4,7 +4,6 @@ $servername = "localhost:3306";
 $username = "root";
 $password = "2503";
 $dbname = "studentreg";
-
 // Create a connection to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -15,35 +14,35 @@ if ($conn->connect_error) {
 
 // Handle form data
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $name = $_GET["name"];
+$name = $_GET["name"];
     $regno = $_GET["regno"];
     $fname = $_GET["fname"];
     $mname = $_GET["mname"];
     $dob = $_GET["dob"];
     $email = $_GET["email"];
     $phone = $_GET["phone"];
-    $course = $_GET["courselist"];
-    
+    $course = $_GET["courselist"]; // Access the "courselist" field using its name
+
     // Handle image upload
     if (isset($_FILES["img-btn"]) && $_FILES["img-btn"]["error"] == 0) {
-        $img_extension = pathinfo($_FILES["img-btn"]["name"], PATHINFO_EXTENSION);
-        $img_name = $regno . "_photo." . $img_extension;
+        $img_name = $_FILES["img-btn"]["name"];
+        $img_tmp_name = $_FILES["img-btn"]["tmp_name"];
         $img_destination = "uploads/" . $img_name;
         
         // Move the uploaded image to a specified directory
-        move_uploaded_file($_FILES["img-btn"]["tmp_name"], $img_destination);
+        move_uploaded_file($img_tmp_name, $img_destination);
     } else {
         $img_destination = "uploads/default.jpg"; // Set a default image path
     }
     
     // Handle PDF resume upload
     if (isset($_FILES["res-btn"]) && $_FILES["res-btn"]["error"] == 0) {
-        $resume_extension = pathinfo($_FILES["res-btn"]["name"], PATHINFO_EXTENSION);
-        $resume_name = $regno . "_resume." . $resume_extension;
+        $resume_name = $_FILES["res-btn"]["name"];
+        $resume_tmp_name = $_FILES["res-btn"]["tmp_name"];
         $resume_destination = "uploads/" . $resume_name;
         
         // Move the uploaded PDF to a specified directory
-        move_uploaded_file($_FILES["res-btn"]["tmp_name"], $resume_destination);
+        move_uploaded_file($resume_tmp_name, $resume_destination);
     } else {
         $resume_destination = "uploads/default.pdf"; // Set a default PDF path
     }
