@@ -1,0 +1,45 @@
+body {
+    background-image: url("./assets/bg.jpg");
+    background-size:contain ;
+    width: 100%;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-position: -10px;
+    margin: 0; 
+}
+
+html {
+    height: 100%;
+}
+
+
+#imagepart {
+    margin: 5%;
+    margin-top: 0;
+    text-align: center;
+}
+
+#topic{
+    color:rgb(241, 141, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+img {
+    cursor: pointer;
+    width: 60%;
+    transition: src 1s ease-in-out;
+    border: 3px solid #7171da; 
+    border-radius: 10px;
+}
+
+img:hover{
+    filter: brightness(80%); 
+}
+
+#topic{
+font-family: "Cyber Princess 3D";
+text-shadow: #7171da 2px 1px;
+}
