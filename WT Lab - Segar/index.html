@@ -8,7 +8,8 @@
   <meta name="author" content="Chandirasegaran" />
   <meta name="description" content="My Static website where I share my works" />
   <link rel="shortcut icon" type="image/x-icon" href="indexLogo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Overlock&family=Poiret+One&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Overlock&family=Poiret+One&display=swap"
     rel="stylesheet">
   <title>Chandirasegaran</title>
   <script src="https://kit.fontawesome.com/c59fed53b6.js" crossorigin="anonymous"></script>
@@ -213,50 +214,145 @@
       color: #fff;
       width: 50%;
       margin-bottom: -200px;
+      margin-top: 5em;
+
     }
 
+    #wtlab:hover{
+      background-color: #053f81;
+    }
     #wtlab h1,
     h2 {
       font-size: 2.5rem;
       font-family: 'Source Code Pro';
       text-align: center;
       margin-bottom: 1em;
-      color: #ffffff;
+      color: #e8caca;
     }
 
     #wtlab ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #wtlab a {
+      position: relative;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: inline-block;
+    }
+
+    #wtlab a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      /* Initially transparent */
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      /* Added background-color transition */
+    }
+
+    #wtlab a:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+      background-color: #ffffff;
+      /* Change the color to your desired underline color on hover */
+    }
+
+    @media (max-width: 768px) {
+
+      #wtlab {
+        /* margin: 5em auto; */
+        /* padding: 2em; */
+        background-color: #1462bc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        color: #fff;
+        width: 70%;
+        margin-bottom: -200px;
+        margin-top: 5em;
+
+      }
+
+      #wtlab h1,
+      h2 {
+        font-size: 1rem;
+        font-family: 'Source Code Pro';
+        text-align: center;
+        margin-bottom: 1em;
+        color: #e8caca;
+      }
+
+      #wtlab a {
+        position: relative;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.8rem;
+        display: inline-block;
+      }
+      #wtlab ul {
   list-style: none;
-  padding: 0;
+  padding: 1em; /* Add padding to the top */
   margin: 0;
 }
 
-#wtlab a {
-  position: relative;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  display: inline-block;
-}
+    .welcome-section {
+      display: flex;
+      font-family: Poppins;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      color: white;
+      font-size: 1em;
+    }
 
-#wtlab a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: transparent; /* Initially transparent */
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
-}
+    .welcome-section>p {
+      font-size: 17px;
+      font-family: Source Code Pro;
+      font-weight: 200;
+      color: purple;
+    }
+    .about-section-1,.about-section-2 ,.about-section-3 {
+      font-size: 17px;
+    }
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #2376d5;
+      font-family: 'Source Code Pro', monospace;
+    }
 
-#wtlab a:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  background-color: #ffffff; /* Change the color to your desired underline color on hover */
-}
-
+    .nav-list {
+      font-size: small;
+      display: flex;
+      margin-right: 3rem;
+      color: #351c1b;
+      list-style: none;
+      margin-right: 0px;
+    }
+    
+    #logo {
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 5;
+      width: 13.5%;
+    }
+    }
   </style>
 </head>
 
@@ -298,8 +394,10 @@
 
   <section id="wtlab">
     <h1>Web Technology Lab Exercises</h1>
-    <h2>Chandirasegaran</h2>
+    <h2>I. Chandirasegaran</h2>
     <h2>19384104</h2>
+    <hr>
+    <h2 style="text-align: left; color:rgb(225, 199, 243);">Exercises: </h2>
     <ul>
       <li><a href="./1.html">Exercise 1 - MyCity</a></li>
       <li><a href="./2.html">Exercise 2 - 7 Colours</a></li>
