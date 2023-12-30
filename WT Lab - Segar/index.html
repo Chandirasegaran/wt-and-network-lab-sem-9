@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="author" content="Chandirasegaran" />
+  <meta name="description" content="My Static website where I share my works" />
+  <link rel="shortcut icon" type="image/x-icon" href="indexLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Overlock&family=Poiret+One&display=swap"
+    rel="stylesheet">
+  <title>Chandirasegaran</title>
+  <script src="https://kit.fontawesome.com/c59fed53b6.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Product Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Open Sans'), local('OpenSans'),
+        url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #2376d5;
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      font-family: 'Source Code Pro', monospace;
+    }
+
+    #logo {
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 5;
+      width: 4.5%;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #2376d5;
+      font-family: 'Source Code Pro', monospace;
+    }
+
+    .nav-list {
+      display: flex;
+      margin-right: 3rem;
+      color: #351c1b;
+      list-style: none;
+    }
+
+    @media (max-width: 28.75em) {
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-list {
+        margin: 1rem;
+      }
+    }
+
+    .nav-list a,
+    .contact-section a {
+      position: relative;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    .nav-list a::after,
+    .contact-section a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffffff;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-list a:hover::after,
+    .contact-section a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    .welcome-section {
+      display: flex;
+      font-family: Poppins;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      color: white;
+      font-size: 1.5em;
+    }
+
+    .welcome-section>p {
+      font-size: 27px;
+      font-family: Source Code Pro;
+      font-weight: 200;
+      color: purple;
+    }
+
+    .about-section {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-family: 'Source Code Pro';
+    }
+
+    .about-section-1 {
+      color: rgb(221, 187, 187);
+    }
+
+    .about-section-2 {
+      color: rgb(230, 169, 206);
+    }
+
+    .about-section-3 {
+      color: rgb(214, 195, 190);
+    }
+
+    .contact-section {
+      text-align: center;
+      padding-top: 20em;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-family: 'Source Code Pro';
+    }
+
+    #contact-title {
+      color: antiquewhite;
+    }
+
+    a {
+      padding: 20px;
+      color: purple;
+    }
+
+    #icon {
+      display: flex;
+    }
+
+    #profile-links {
+      padding: 20px;
+    }
+
+    a:hover {
+      color: azure;
+    }
+
+    footer {
+      font-weight: 500;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2rem;
+      color: #351c1b;
+      font-size: 30px;
+      font-family: Product Sans;
+    }
+
+    footer>p {
+      margin: 2rem;
+    }
+
+    footer i {
+      vertical-align: middle;
+    }
+
+    @media (max-width: 28.75em) {
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    #wtlab {
+      margin: 5em auto;
+      padding: 2em;
+      background-color: #1462bc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      width: 50%;
+      margin-bottom: -200px;
+    }
+
+    #wtlab h1,
+    h2 {
+      font-size: 2.5rem;
+      font-family: 'Source Code Pro';
+      text-align: center;
+      margin-bottom: 1em;
+      color: #ffffff;
+    }
+
+    #wtlab ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#wtlab a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+#wtlab a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent; /* Initially transparent */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+}
+
+#wtlab a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  background-color: #ffffff; /* Change the color to your desired underline color on hover */
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- START NAV -->
+  <header>
+    <nav id="navbar" class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#wtlab">Lab Exercise</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="https://chandirasegaran.github.io"><img id="logo" src="indexLogo.png" alt="logo" title="Segar" /></a>
+  </header>
+  <!-- END NAV -->
+
+  <!-- Welcome Session -->
+  <section id="welcome-section" class="welcome-section">
+    <h1>Hi👋🏻 I am Chandirasegaran </h1>
+    <p>Welcome to my Portfolio 😎</p>
+  </section>
+  <!-- Welcome Session End-->
+
+  <!-- START PROJECTS SECTION -->
+  <section id="about" class="about-section">
+    <h2 class="about-section-1">I'm a student in Pondicherry University</h2>
+    <h2 class="about-section-2">Doing M.Sc. Integrated Computer Science</h2>
+    <h2 class="about-section-3">Living in Pondicherry</h2>
+  </section>
+  <!-- END PROJECTS SECTION -->
+
+  <section id="wtlab">
+    <h1>Web Technology Lab Exercises</h1>
+    <h2>Chandirasegaran</h2>
+    <h2>19384104</h2>
+    <ul>
+      <li><a href="./1.html">Exercise 1 - MyCity</a></li>
+      <li><a href="./2.html">Exercise 2 - 7 Colours</a></li>
+      <li><a href="./3.html">Exercise 3 - Populations</a></li>
+      <li><a href="./4.html">Exercise 4 - Different Styles</a></li>
+      <li><a href="./5.html">Exercise 5 - Departmental Store Form</a></li>
+      <li><a href="./6.html">Exercise 6 - Lists</a></li>
+      <li><a href="./7.html">Exercise 7 - Friend Card</a></li>
+      <li><a href="./8.html">Exercise 8 - Registeration Form</a></li>
+      <li><a href="./9.html">Exercise 9 - Three Frames</a></li>
+      <li><a href="./10.html">Exercise 10 - Frames</a></li>
+      <li><a href="./11.html">Exercise 11 - Warning Message</a></li>
+      <li><a href="./12.html">Exercise 12 - Registeration Form with Validation</a></li>
+      <li><a href="./13.html">Exercise 13 - Mini Project - College Admission</a></li>
+    </ul>
+  </section>
+
+  <!-- START CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+    <div id="profile-links">
+      <h2 id="contact-title">Contact Me 📱</h2>
+    </div>
+    <div id="icons" class="pr-link">
+      <a href="https://chandirasegaran.blogspot.com" target="_blank" class="fa fa-google fa-2x"></a>
+      <a href="https://github.com/Chandirasegaran/" target="_blank" class="fa fa-github fa-2x"></a>
+      <a href="https://www.facebook.com/chandirasegaransegar/" target="_blank" class="fa fa-facebook fa-2x"></a>
+      <a href="https://twitter.com/chandirasegar25" target="_blank" class="fa fa-twitter fa-2x"></a>
+      <a href="https://instagram.com/chandirasegaransegar" target="_blank" class="fa fa-instagram fa-2x"></a>
+    </div>
+  </section>
+  <!-- END CONTACT SECTION -->
+
+  <!-- START FOOTER SECTION -->
+  <footer>
+    <p>© Chandirasegaran</p>
+  </footer>
+  <!-- END FOOTER SECTION -->
+
+</body>
+
+</html>

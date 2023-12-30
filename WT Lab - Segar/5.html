@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departmental Store</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+
+        }
+        #container{
+            background-color: #fff;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            margin: 70px;
+            padding: 45px;
+            text-align: left;
+            padding-right: 60px;
+            padding-top: 30px;
+        }
+        input,select,textarea{
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        input[type=submit]{
+            width: 25%;
+            color: white;
+            background-color: green;
+        }
+        input[type=reset]{
+            width: 25%;
+            color: white;
+            background-color: red;
+        }
+        label{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="">
+            <table>
+                <h1 style="text-align: center;">Customer Feedback Form</h1>
+                <tr>
+                    <th></th>
+                    <th style="width: 300px;"></th>
+                </tr>
+                <tr>
+                    <td><label for="">Customer Name:</label> </td>
+                    <td><input type="text" name="customername" id="cname" placeholder="Full Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Customer Phone Number:</label> </td>
+                    <td><input type="tel" name="cusotmertelephone" id="ctel" placeholder="Phone Number"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Preferred Days of Purchasing: </label></td>
+                    <td><select name="dayofpurchase" id="dop">
+                        <option value="sunday">Sunday</option>
+                        <option value="monday" selected>Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="">Favourite Item:</label></td>
+                    <td>
+                        <select name="favitem" id="favitem">
+                            <option value="electronics">Electronics</option>
+                            <option value="groceryitems">Grocery Items</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="furnitures">Furnitures</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="">Suggestions:</label></td>
+                    <td><textarea name="Suggestions" id="suggestion" rows="8"></textarea></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;" colspan="2"><input type="submit" value="Submit">&nbsp &nbsp &nbsp <input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

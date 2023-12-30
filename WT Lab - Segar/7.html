@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Post Card</title>
+    <style>
+        #container {
+            border: 2px solid black;
+            width: 360px;
+            padding: 20px;
+            line-height: 30px;
+        }
+        input{
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <label for="name">Enter Name of your friend</label>&nbsp&nbsp
+        <input type="text">
+        <br>
+        <label for="choosethefile">Choose the file you want to post to your Friend</label>
+        <br>
+        <input type="text" id="blank" name="blank">&nbsp&nbsp
+        <input type="button" id="browse" name="browse" value="Browse..."><br>
+        <label for="what">What does the file contain?</label>
+        <br>
+        <input type="checkbox" id="1" value="img" checked> <label for="1"> Image</label>
+        <input type="checkbox" id="2" value="sourcecode" checked> <label for="2"> Source Code</label>
+        <input type="checkbox" id="3" value="binarycode"> <label for="3"> Binary Code</label>
+        <br>
+        <label for="completed">You have Completed the Form. </label> &nbsp&nbsp<input type="submit" value="Submit Query">
+    </div>
+</body>
+
+</html>
